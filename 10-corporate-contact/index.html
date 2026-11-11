@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Global | Enterprise Solutions</title>
+    <meta name="description" content="Contact our global enterprise team.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <span class="stock-ticker">ENG: +1.24%</span>
+            <div class="top-links">
+                <a href="#">Investors</a>
+                <a href="#">Careers</a>
+                <a href="#">Global (EN)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Corporate Navbar -->
+    <header class="corp-header">
+        <div class="container header-container">
+            <a href="#" class="corp-brand">
+                <div class="brand-mark"></div>
+                Enterprise<span class="fw-normal">Global</span>
+            </a>
+            
+            <nav class="corp-nav">
+                <a href="#">Industries</a>
+                <a href="#">Services</a>
+                <a href="#">Insights</a>
+                <a href="#">About Us</a>
+                <a href="#" class="active">Contact</a>
+            </nav>
+            
+            <button class="search-btn" aria-label="Search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Connect with our global network of professionals to find the right solutions for your business needs.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Departments Grid -->
+        <section class="departments-section">
+            <div class="container">
+                <h2 class="section-title">Direct Inquiries</h2>
+                <div class="dept-grid">
+                    <div class="dept-card">
+                        <h3>Sales</h3>
+                        <p>Discuss enterprise solutions and pricing with our sales executives.</p>
+                        <a href="mailto:sales@enterprise.global">sales@enterprise.global</a>
+                        <span class="phone">+1 (800) 555-0101</span>
+                    </div>
+                    <div class="dept-card">
+                        <h3>Customer Support</h3>
+                        <p>Get assistance with your current enterprise deployments and services.</p>
+                        <a href="mailto:support@enterprise.global">support@enterprise.global</a>
+                        <span class="phone">+1 (800) 555-0102</span>
+                    </div>
+                    <div class="dept-card">
+                        <h3>Partnerships</h3>
+                        <p>Explore strategic alliances and channel partner opportunities.</p>
+                        <a href="mailto:partners@enterprise.global">partners@enterprise.global</a>
+                        <span class="phone">+1 (800) 555-0103</span>
+                    </div>
+                    <div class="dept-card">
+                        <h3>Press & Media</h3>
+                        <p>Access our media kit and contact our corporate communications team.</p>
+                        <a href="mailto:press@enterprise.global">press@enterprise.global</a>
+                        <span class="phone">+1 (800) 555-0104</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Form & Office Info -->
+        <section class="form-office-section">
+            <div class="container form-layout">
+                
+                <!-- Inquiry Form -->
+                <div class="form-panel">
+                    <h2 class="section-title">General Inquiry</h2>
+                    <p class="form-intro">Please complete the form below, and a representative will route your request to the appropriate department.</p>
+                    
+                    <form id="corpForm" class="corp-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="req">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-msg">Required</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name <span class="req">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-msg">Required</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Business Email <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-msg">Valid email required</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name <span class="req">*</span></label>
+                                <input type="text" id="company" name="company" required>
+                                <span class="error-msg">Required</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country / Region <span class="req">*</span></label>
+                            <select id="country" name="country" required>
+                                <option value="" disabled selected>Select Region</option>
+                                <option value="na">North America</option>
+                                <option value="eu">Europe</option>
+                                <option value="ap">Asia Pacific</option>
+                                <option value="la">Latin America</option>
+                                <option value="me">Middle East & Africa</option>
+                            </select>
+                            <span class="error-msg">Please select a region</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">How can we assist you? <span class="req">*</span></label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <span class="error-msg">Message is required</span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary" id="submitBtn">
+                                Submit Request
+                            </button>
+                            <p class="privacy">By submitting, you agree to our <a href="#">Privacy Statement</a>.</p>
+                        </div>
+                    </form>
+                    
+                    <div class="success-message" id="successState">
+                        <h3>Submission Received</h3>
+                        <p>Thank you for contacting EnterpriseGlobal. A reference number has been sent to your email, and a representative will be in touch shortly.</p>
+                        <button type="button" class="btn-secondary" id="resetBtn">Submit Another Request</button>
+                    </div>
+                </div>
+
+                <!-- Global Headquarters Info -->
+                <div class="office-sidebar">
+                    <h2 class="section-title">Global Headquarters</h2>
+                    <div class="office-card">
+                        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22400%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22400%22%20height%3D%22200%22%20fill%3D%22%23E0E0E0%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%23999999%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214px%22%3ECorporate%20Building%20Placeholder%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Corporate Building" class="office-img">
+                        <div class="office-details">
+                            <h3>New York (Global HQ)</h3>
+                            <address>
+                                1 World Trade Center<br>
+                                Suite 4500<br>
+                                New York, NY 10007<br>
+                                United States
+                            </address>
+                            <a href="#" class="directions-link">View Map & Directions &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <h2 class="section-title mt-4">Regional Hubs</h2>
+                    <ul class="regional-hubs">
+                        <li>
+                            <strong>London</strong>
+                            <span>+44 20 7123 4567</span>
+                        </li>
+                        <li>
+                            <strong>Singapore</strong>
+                            <span>+65 6123 4567</span>
+                        </li>
+                        <li>
+                            <strong>Tokyo</strong>
+                            <span>+81 3 1234 5678</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="corp-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="footer-brand">EnterpriseGlobal</a>
+                <p>Delivering excellence in enterprise solutions since 1995.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 EnterpriseGlobal Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

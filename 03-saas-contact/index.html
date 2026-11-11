@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SaaS Platform</title>
+    <meta name="description" content="Get in touch with our team. Modern SaaS contact page.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">Nexus<span class="dot">.</span></a>
+            <nav class="nav-menu">
+                <a href="#">Products</a>
+                <a href="#">Solutions</a>
+                <a href="#">Pricing</a>
+                <a href="#">Resources</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Log in</a>
+                <a href="#" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <section class="hero-section">
+            <div class="container text-center">
+                <span class="badge">Contact Us</span>
+                <h1 class="hero-title">How can we help you today?</h1>
+                <p class="hero-subtitle">Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions.</p>
+            </div>
+        </section>
+
+        <section class="contact-main">
+            <div class="container">
+                <div class="form-card">
+                    <form id="saasForm" class="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                                <span class="error-msg">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Work Email</label>
+                                <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+                                <span class="error-msg">Please enter a valid work email</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" placeholder="Acme Inc." required>
+                                <span class="error-msg">Please enter your company</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="reason">Reason for Contacting</label>
+                                <div class="select-wrapper">
+                                    <select id="reason" name="reason" required>
+                                        <option value="" disabled selected>Select a reason...</option>
+                                        <option value="sales">Sales Inquiry</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="partnership">Partnership</option>
+                                        <option value="general">General Inquiry</option>
+                                    </select>
+                                </div>
+                                <span class="error-msg">Please select a reason</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="How can our team help you?" rows="5" required></textarea>
+                            <span class="error-msg">Please provide a message</span>
+                        </div>
+
+                        <div class="form-action">
+                            <button type="submit" class="btn-primary btn-submit" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <svg class="spinner" viewBox="0 0 50 50">
+                                    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                                </svg>
+                            </button>
+                            <p class="privacy-note">By submitting this form, you agree to our <a href="#">Privacy Policy</a>.</p>
+                        </div>
+                    </form>
+
+                    <div class="success-message" id="successState">
+                        <div class="success-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Message sent successfully!</h3>
+                        <p>We've received your inquiry. One of our team members will get back to you within 24 hours.</p>
+                        <button type="button" class="btn-ghost" id="resetBtn">Send another message</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-methods">
+            <div class="container">
+                <div class="methods-grid">
+                    <div class="method-card">
+                        <div class="method-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Chat with Sales</h3>
+                        <p>Interested in our product? Talk to our sales team now.</p>
+                        <a href="#" class="method-link">Start a chat &rarr;</a>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                        </div>
+                        <h3>Help Center</h3>
+                        <p>Find answers, documentation, and troubleshooting guides.</p>
+                        <a href="#" class="method-link">Visit help center &rarr;</a>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Email Support</h3>
+                        <p>Prefer email? Send us a message and we'll reply shortly.</p>
+                        <a href="mailto:support@nexus.com" class="method-link">support@nexus.com &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

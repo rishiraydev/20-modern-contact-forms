@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiries | Editorial Design</title>
+    <meta name="description" content="An editorial, magazine-style contact layout.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="page-layout">
+        
+        <!-- Left Panel: Asymmetric Text / Info -->
+        <aside class="editorial-sidebar">
+            <header class="header">
+                <div class="logo">Ed.</div>
+                <div class="issue">VOL. 4 &mdash; INQUIRIES</div>
+            </header>
+
+            <div class="sidebar-content">
+                <h1 class="headline">
+                    Reach <em>Out</em><br>
+                    &amp; Connect.
+                </h1>
+                
+                <div class="contact-details">
+                    <div class="detail-block">
+                        <span class="label">LONDON DESK</span>
+                        <p>154 Clerkenwell Rd<br>London EC1R 5AB<br>United Kingdom</p>
+                    </div>
+                    
+                    <div class="detail-block">
+                        <span class="label">DIRECT</span>
+                        <p><a href="mailto:hello@editorial.co">hello@editorial.co</a><br>+44 20 7123 4567</p>
+                    </div>
+                </div>
+
+                <div class="statement">
+                    <p>We are currently accepting new commissions for the upcoming season. For press, speaking engagements, or collaborations, please direct your correspondence via the form.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Panel: The Form -->
+        <main class="form-panel">
+            <div class="form-wrapper">
+                <h2 class="form-title">Correspondence</h2>
+                
+                <form id="editorialForm" class="editorial-form" novalidate>
+                    
+                    <div class="input-line">
+                        <label for="fullName">Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        <span class="error-text">Required field</span>
+                    </div>
+
+                    <div class="input-line">
+                        <label for="emailAddr">Email</label>
+                        <input type="email" id="emailAddr" name="emailAddr" required>
+                        <span class="error-text">Valid email required</span>
+                    </div>
+
+                    <div class="input-line">
+                        <label for="inquiryType">Subject</label>
+                        <div class="select-wrapper">
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="commission">Commission</option>
+                                <option value="press">Press & Media</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <span class="error-text">Required field</span>
+                    </div>
+
+                    <div class="input-line textarea-line">
+                        <label for="messageBody">Message</label>
+                        <textarea id="messageBody" name="messageBody" rows="5" required></textarea>
+                        <span class="error-text">Required field</span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Submit</span>
+                            <span class="spinner"></span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="success-screen" id="successState">
+                    <div class="success-content">
+                        <h3>Dispatched.</h3>
+                        <p>Your correspondence has been received. We shall respond in due course.</p>
+                        <button class="reset-btn" id="resetBtn">Draft another</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

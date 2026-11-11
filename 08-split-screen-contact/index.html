@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Split Screen</title>
+    <meta name="description" content="Get in touch. Editorial split-screen contact page.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="split-layout">
+        
+        <!-- Left Side: Information -->
+        <section class="split-left">
+            <div class="left-content">
+                <nav class="minimal-nav">
+                    <a href="#" class="brand">STUDIO.</a>
+                </nav>
+
+                <div class="info-main">
+                    <h1>Let's create<br>something<br><em>extraordinary.</em></h1>
+                    <p class="intro">We partner with forward-thinking brands to create digital experiences that leave a lasting impression.</p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-block">
+                            <h3>Studio</h3>
+                            <p>450 Art District Blvd<br>Suite 200<br>Los Angeles, CA 90013</p>
+                        </div>
+                        
+                        <div class="detail-block">
+                            <h3>Contact</h3>
+                            <a href="mailto:hello@studio.co">hello@studio.co</a>
+                            <a href="tel:+13105550198">+1 (310) 555-0198</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-footer">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Behance</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Side: Form -->
+        <section class="split-right">
+            <div class="right-content">
+                <div class="form-container">
+                    <h2>Inquire</h2>
+                    
+                    <form id="splitForm" novalidate>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-msg">Required</span>
+                            </div>
+                            <div class="input-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-msg">Required</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-msg">Valid email required</span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="inquiryType">Inquiry Type</label>
+                            <div class="select-wrapper">
+                                <select id="inquiryType" name="inquiryType" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="project">New Project</option>
+                                    <option value="career">Careers</option>
+                                    <option value="press">Press & Media</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <span class="error-msg">Please select an option</span>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <span class="error-msg">Message is required</span>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="submit-btn">
+                            <span class="btn-text">Submit Request</span>
+                            <span class="btn-line"></span>
+                        </button>
+                    </form>
+                    
+                    <!-- Success State -->
+                    <div id="successState" class="success-state">
+                        <h2>Received.</h2>
+                        <p>Thank you for your inquiry. Our team will review your message and respond shortly.</p>
+                        <button id="resetBtn" class="reset-btn">Send another</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

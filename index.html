@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Contact Form Templates | Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .site-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4f46e5, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .site-header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Showcase */
+        .showcase {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card */
+        .template-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .template-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: #cbd5e1;
+        }
+
+        .template-number {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .template-card h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .template-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            flex: 1;
+        }
+
+        .template-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--bg);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s;
+            border: 1px solid var(--border);
+        }
+
+        .template-link:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .template-link svg {
+            width: 18px;
+            height: 18px;
+            margin-left: 8px;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .site-footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <span class="status-badge">20/20</span>
+        <h1>Contact Form Templates</h1>
+        <p>A premium collection of modern, responsive, and beautifully designed contact pages. Built with Semantic HTML,
+            modern CSS, and Vanilla JS.</p>
+    </header>
+
+    <main class="showcase">
+        <div class="showcase-grid">
+
+            <!-- 01 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 01</span>
+                <h2>Minimal Contact</h2>
+                <p>An ultra-clean, minimalistic Scandinavian design focusing on stark typography and extensive
+                    whitespace.</p>
+                <a href="01-minimal-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 02 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 02</span>
+                <h2>Dark Developer</h2>
+                <p>A sleek dark-mode layout tailored for dev tools and SaaS, featuring subtle glows and monospace
+                    accents.</p>
+                <a href="02-dark-developer-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 03 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 03</span>
+                <h2>SaaS Contact</h2>
+                <p>A high-conversion modern SaaS layout with a clean header, centered form, and soft premium shadows.
+                </p>
+                <a href="03-saas-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 04 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 04</span>
+                <h2>Agency Contact</h2>
+                <p>A bold, high-contrast, brutalist-inspired design perfect for creative studios and digital agencies.
+                </p>
+                <a href="04-agency-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 05 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 05</span>
+                <h2>Freelancer Contact</h2>
+                <p>A personal, friendly split-screen layout combining a prominent profile area with a clean contact
+                    form.</p>
+                <a href="05-freelancer-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 06 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 06</span>
+                <h2>Glassmorphism</h2>
+                <p>A visually striking template utilizing animated, blurred background blobs and frosted glass UI
+                    elements.</p>
+                <a href="06-glassmorphism-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 07 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 07</span>
+                <h2>Gradient Contact</h2>
+                <p>A vibrant, colorful layout featuring a rich CSS gradient background and contrasting crisp white
+                    content cards.</p>
+                <a href="07-gradient-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 08 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 08</span>
+                <h2>Split-Screen Contact</h2>
+                <p>An elegant, editorial 50/50 split layout blending serif typography with minimalist input fields.</p>
+                <a href="08-split-screen-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 09 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 09</span>
+                <h2>Contact + Map</h2>
+                <p>A corporate layout combining direct contact info cards, a message form, and an interactive map
+                    placeholder.</p>
+                <a href="09-contact-map/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 10 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 10</span>
+                <h2>Corporate Contact</h2>
+                <p>A highly structured, conservative design appropriate for enterprise global companies with
+                    departmental routing.</p>
+                <a href="10-corporate-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 11 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 11</span>
+                <h2>Startup Contact</h2>
+                <p>A bold, dark-themed startup template featuring custom "pill" style multi-select checkboxes for
+                    inquiries.</p>
+                <a href="11-startup-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 12 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 12</span>
+                <h2>Dark Neon Contact</h2>
+                <p>A cyberpunk/synthwave aesthetic featuring a 3D grid background, CSS glitch text, and glowing neon
+                    inputs.</p>
+                <a href="12-dark-neon-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 13 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 13</span>
+                <h2>Terminal Contact</h2>
+                <p>A highly interactive, retro command-line interface (CLI) that steps users through the form using the
+                    Enter key.</p>
+                <a href="13-terminal-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 14 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 14</span>
+                <h2>Code Editor Contact</h2>
+                <p>A creative template replicating a VS Code UI, where form inputs are embedded within
+                    syntax-highlighted code.</p>
+                <a href="14-code-editor-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 15 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 15</span>
+                <h2>Bento Contact</h2>
+                <p>A modern, Apple-inspired "Bento grid" layout organizing information into distinct, softly rounded
+                    cards.</p>
+                <a href="15-bento-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 16 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 16</span>
+                <h2>Contact Cards</h2>
+                <p>A card-based layout providing distinct contact channels (Email, Phone, Office) alongside a full-width
+                    form.</p>
+                <a href="16-contact-cards/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 17 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 17</span>
+                <h2>Large Typography</h2>
+                <p>An editorial layout featuring a massive serif headline paired with an ultra-minimal,
+                    border-bottom-only input form.</p>
+                <a href="17-large-typography-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 18 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 18</span>
+                <h2>Editorial Contact</h2>
+                <p>An asymmetric, magazine-style layout contrasting a light informational sidebar with a dark,
+                    high-contrast form panel.</p>
+                <a href="18-editorial-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 19 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 19</span>
+                <h2>Brutalist Contact</h2>
+                <p>A raw, web brutalism design with oversized typography, heavy borders, an animated ticker, and stark
+                    error states.</p>
+                <a href="19-brutalist-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- 20 -->
+            <div class="template-card">
+                <span class="template-number">TEMPLATE 20</span>
+                <h2>Soft UI Contact</h2>
+                <p>A Neumorphism (soft UI) form utilizing complex CSS inset and outset box-shadows to simulate extruded
+                    surfaces.</p>
+                <a href="20-soft-ui-contact/index.html" target="_blank" class="template-link">
+                    View Template
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Contact Form Collection. <a href="copyright.html" style="color: var(--text-muted); text-decoration: underline;">Copyright by Rishi Ray</a>.</p>
+    </footer>
+
+</body>
+
+</html>

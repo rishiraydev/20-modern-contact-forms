@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | NextGen Startup</title>
+    <meta name="description" content="Let's build the future together. Contact our startup team.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Decorative Background Elements -->
+    <div class="decor shape-1"></div>
+    <div class="decor shape-2"></div>
+    <div class="decor shape-3"></div>
+    
+    <!-- Navbar -->
+    <nav class="startup-nav">
+        <div class="container nav-inner">
+            <a href="#" class="logo">NextGen.</a>
+            <div class="nav-links">
+                <a href="#">Product</a>
+                <a href="#">Company</a>
+                <a href="#">Careers</a>
+                <a href="#" class="active">Contact</a>
+            </div>
+            <a href="#" class="cta-btn sm">Get Early Access</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container main-layout">
+        
+        <!-- Left Side: Hero and Info -->
+        <div class="hero-info-side">
+            <h1 class="hero-title">Let's build the <span>future</span> together.</h1>
+            <p class="hero-subtitle">Whether you're an investor, potential partner, or an early adopter wanting to beta test our product, we're all ears.</p>
+            
+            <div class="startup-info">
+                <div class="info-item">
+                    <div class="icon">🚀</div>
+                    <div>
+                        <h3>Join the Beta</h3>
+                        <p>beta@nextgen.io</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">🤝</div>
+                    <div>
+                        <h3>Partnerships</h3>
+                        <p>partners@nextgen.io</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="icon">📍</div>
+                    <div>
+                        <h3>HQ</h3>
+                        <p>San Francisco, CA (Remote First)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#">X (Twitter)</a>
+                <a href="#">Discord</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- Right Side: Form Container -->
+        <div class="form-side">
+            <div class="form-card">
+                <h2>Say Hello</h2>
+                
+                <form id="startupForm" novalidate>
+                    <div class="input-wrap">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Elon Musk" required>
+                        <span class="error-txt">Name is required</span>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="elon@example.com" required>
+                        <span class="error-txt">Valid email is required</span>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label>I'm interested in:</label>
+                        <div class="pill-group">
+                            <label class="pill-checkbox">
+                                <input type="checkbox" name="interest" value="beta">
+                                <span class="pill">Beta Access</span>
+                            </label>
+                            <label class="pill-checkbox">
+                                <input type="checkbox" name="interest" value="invest">
+                                <span class="pill">Investing</span>
+                            </label>
+                            <label class="pill-checkbox">
+                                <input type="checkbox" name="interest" value="partner">
+                                <span class="pill">Partnership</span>
+                            </label>
+                            <label class="pill-checkbox">
+                                <input type="checkbox" name="interest" value="jobs">
+                                <span class="pill">Careers</span>
+                            </label>
+                        </div>
+                        <span class="error-txt" id="interestError">Select at least one interest</span>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="3" placeholder="What's on your mind?" required></textarea>
+                        <span class="error-txt">Message is required</span>
+                    </div>
+
+                    <button type="submit" class="cta-btn lg full-width" id="submitBtn">
+                        <span class="btn-txt">Send Message</span>
+                        <div class="spinner"></div>
+                    </button>
+                </form>
+
+                <div class="success-msg" id="successMsg">
+                    <h3>Awesome! 🚀</h3>
+                    <p>Your message has been beamed up to our servers. We'll be in touch at lightspeed.</p>
+                    <button class="text-btn" id="resetBtn">Send another message</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

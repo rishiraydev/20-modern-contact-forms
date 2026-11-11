@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Support Cards</title>
+    <meta name="description" content="Get in touch via our contact cards.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="container">
+                <h1>How can we help?</h1>
+                <p>Choose the best way to reach us based on your needs.</p>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="cards-grid">
+                
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="card-icon blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <h2>Email Support</h2>
+                    <p>Drop us a line and we'll get back to you within 24 hours.</p>
+                    <a href="mailto:support@example.com" class="card-action">support@example.com</a>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="contact-card">
+                    <div class="card-icon green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <h2>Call Us</h2>
+                    <p>Available Monday through Friday, 9am to 6pm EST.</p>
+                    <a href="tel:+18005550199" class="card-action">+1 (800) 555-0199</a>
+                </div>
+
+                <!-- Office Card -->
+                <div class="contact-card">
+                    <div class="card-icon orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <h2>Visit Office</h2>
+                    <p>Come say hello at our headquarters in New York.</p>
+                    <a href="#" class="card-action">Get Directions &rarr;</a>
+                </div>
+
+                <!-- Direct Form Card (Spans full width on tablet/desktop) -->
+                <div class="contact-card form-card">
+                    <div class="card-header">
+                        <div class="card-icon purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h2>Send a Message</h2>
+                            <p>Use the form below for general inquiries.</p>
+                        </div>
+                    </div>
+                    
+                    <form id="cardsForm" class="cards-form" novalidate>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error">Name is required</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error">Valid email required</span>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="topic">Topic</label>
+                                <select id="topic" name="topic" required>
+                                    <option value="" disabled selected>Select a topic</option>
+                                    <option value="sales">Sales</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="billing">Billing</option>
+                                </select>
+                                <span class="error">Topic is required</span>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                                <span class="error">Message is required</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Submit</span>
+                            <div class="spinner"></div>
+                        </button>
+                    </form>
+
+                    <div class="success-overlay" id="successState">
+                        <div class="success-icon">✓</div>
+                        <h3>Message Delivered</h3>
+                        <p>We'll be in touch shortly.</p>
+                        <button class="reset-btn" id="resetBtn">Send Another</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

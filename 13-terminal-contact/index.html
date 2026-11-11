@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_v1.0.sh</title>
+    <meta name="description" content="Terminal style contact form.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="terminal-container">
+        <!-- Window Chrome -->
+        <div class="terminal-header">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="window-title">guest@contact-server:~</div>
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="terminal-body" id="terminalBody">
+            <div class="output-line">Last login: <span id="loginDate"></span> on ttys001</div>
+            <div class="output-line">Contact Server (Ubuntu 22.04.1 LTS)</div>
+            <div class="output-line mt-1">Type your details below to establish contact.</div>
+            <div class="output-line mt-1">=============================================</div>
+            
+            <form id="terminalForm" novalidate autocomplete="off">
+                <!-- Name Input -->
+                <div class="prompt-line" id="line-name">
+                    <span class="prompt">guest@contact-server:~$</span> 
+                    <span class="command">set name = </span>
+                    <input type="text" id="name" name="name" class="cli-input" required autofocus>
+                </div>
+                <div class="error-msg" id="err-name">Error: Name is required.</div>
+
+                <!-- Email Input -->
+                <div class="prompt-line hidden" id="line-email">
+                    <span class="prompt">guest@contact-server:~$</span> 
+                    <span class="command">set email = </span>
+                    <input type="email" id="email" name="email" class="cli-input" required>
+                </div>
+                <div class="error-msg" id="err-email">Error: Valid email format required.</div>
+
+                <!-- Message Input -->
+                <div class="prompt-line hidden" id="line-message">
+                    <span class="prompt">guest@contact-server:~$</span> 
+                    <span class="command">echo message > </span>
+                    <textarea id="message" name="message" class="cli-input textarea-input" rows="1" required></textarea>
+                </div>
+                <div class="error-msg" id="err-message">Error: Message cannot be empty.</div>
+
+                <!-- Submit Trigger (Hidden visually, triggered via enter) -->
+                <div class="prompt-line hidden" id="line-submit">
+                    <span class="prompt">guest@contact-server:~$</span> 
+                    <span class="command">./send_contact.sh</span>
+                    <button type="submit" id="submitBtn" class="hidden-btn"></button>
+                </div>
+            </form>
+
+            <!-- Loading & Success Output -->
+            <div id="processingOutput" class="hidden">
+                <div class="output-line mt-1">[+] Initializing connection... OK</div>
+                <div class="output-line">[+] Compiling payload... OK</div>
+                <div class="output-line">[+] Sending packet to host... <span class="blink">_</span></div>
+            </div>
+
+            <div id="successOutput" class="hidden">
+                <div class="output-line success mt-1">Message successfully delivered!</div>
+                <div class="output-line">Connection closed.</div>
+                <div class="prompt-line mt-1">
+                    <span class="prompt">guest@contact-server:~$</span> 
+                    <button id="resetBtn" class="reset-cmd">clear && reload</button>
+                </div>
+            </div>
+            
+            <!-- Global Blinking Cursor for active input -->
+            <div id="globalCursor" class="blinking-cursor"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

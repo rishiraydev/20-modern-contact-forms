@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Contact | Let's Build</title>
+    <meta name="description" content="Get in touch. Dark developer-focused contact page.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <header class="dev-header">
+            <div class="logo">
+                <span class="punct">&lt;</span><span class="tag">dev</span><span class="punct">/&gt;</span>
+            </div>
+            <nav class="dev-nav">
+                <a href="#">~/<span class="nav-item">home</span></a>
+                <a href="#">~/<span class="nav-item">projects</span></a>
+                <a href="#" class="active">~/<span class="nav-item">contact</span></a>
+            </nav>
+        </header>
+
+        <main class="dev-main">
+            <div class="grid-container">
+                <div class="content-side">
+                    <h1 class="heading">Let's build<br>something.</h1>
+                    
+                    <div class="dev-info-list">
+                        <div class="info-item">
+                            <span class="info-label">email:</span>
+                            <a href="mailto:dev@example.com" class="info-value">dev@example.com</a>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">github:</span>
+                            <a href="#" class="info-value">github.com/developer</a>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">linkedin:</span>
+                            <a href="#" class="info-value">linkedin.com/in/developer</a>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">location:</span>
+                            <span class="info-value">San Francisco, CA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-side">
+                    <div class="form-card">
+                        <div class="card-header">
+                            <div class="window-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <span class="card-title">contact_form.sh</span>
+                        </div>
+                        <div class="card-body">
+                            <form id="devForm" class="dev-form" novalidate>
+                                <div class="form-group">
+                                    <label for="name">const name =</label>
+                                    <input type="text" id="name" name="name" placeholder='"Enter your name"' required>
+                                    <span class="error-msg">Error: Name is required</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">const email =</label>
+                                    <input type="email" id="email" name="email" placeholder='"Enter your email"' required>
+                                    <span class="error-msg">Error: Invalid email format</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="projectType">let project_type =</label>
+                                    <div class="custom-select-wrapper">
+                                        <select id="projectType" name="projectType" required>
+                                            <option value="" disabled selected>"Select type"</option>
+                                            <option value="frontend">"Frontend Development"</option>
+                                            <option value="backend">"Backend / API"</option>
+                                            <option value="fullstack">"Fullstack Project"</option>
+                                            <option value="consulting">"Consulting"</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">const message =</label>
+                                    <textarea id="message" name="message" placeholder='"Describe your project..."' rows="4" required></textarea>
+                                    <span class="error-msg">Error: Message cannot be empty</span>
+                                </div>
+
+                                <button type="submit" class="dev-submit" id="submitBtn">
+                                    <span class="btn-text">await form.submit()</span>
+                                    <span class="btn-loader">Running...</span>
+                                </button>
+                            </form>
+                            
+                            <div class="success-state" id="successState">
+                                <div class="success-icon">✓</div>
+                                <h3>Execution Successful</h3>
+                                <p>Data transmitted. I will respond shortly.</p>
+                                <button type="button" class="dev-reset" id="resetBtn">Return 0</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

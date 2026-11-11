@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Creative Agency</title>
+    <meta name="description" content="Have a project in mind? Contact our creative agency today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="agency-nav">
+        <a href="#" class="agency-logo">AGENCY©</a>
+        <div class="nav-links">
+            <a href="#">Work</a>
+            <a href="#">Studio</a>
+            <a href="#">News</a>
+            <a href="#" class="active">Contact</a>
+        </div>
+        <button class="menu-btn">Menu</button>
+    </nav>
+
+    <main class="agency-main">
+        <div class="layout-grid">
+            
+            <!-- Left Side: Editorial Content -->
+            <div class="content-panel">
+                <div class="heading-wrapper">
+                    <h1>Have a<br>project<br><em>in mind?</em></h1>
+                    <div class="decorative-line"></div>
+                </div>
+
+                <div class="agency-details">
+                    <div class="detail-block">
+                        <h3>New Business</h3>
+                        <a href="mailto:hello@agency.co">hello@agency.co</a>
+                        <a href="tel:+18001234567">+1 800 123 4567</a>
+                    </div>
+                    <div class="detail-block">
+                        <h3>Visit Us</h3>
+                        <p>100 Creative Way, Suite 400<br>Los Angeles, CA 90012</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <div class="form-panel">
+                <form id="agencyForm" class="agency-form" novalidate>
+                    <div class="form-section">
+                        <span class="section-number">01.</span>
+                        <h2 class="section-title">The Basics</h2>
+                        <div class="input-grid">
+                            <div class="input-wrap">
+                                <input type="text" id="name" name="name" placeholder=" " required>
+                                <label for="name">Your Name</label>
+                                <span class="error-text">Required field</span>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <label for="email">Email Address</label>
+                                <span class="error-text">Invalid email</span>
+                            </div>
+                            <div class="input-wrap full-width">
+                                <input type="text" id="company" name="company" placeholder=" " required>
+                                <label for="company">Company / Organization</label>
+                                <span class="error-text">Required field</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <span class="section-number">02.</span>
+                        <h2 class="section-title">What do you need?</h2>
+                        <div class="checkbox-grid" id="servicesGroup">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="services" value="branding">
+                                <span class="check-box"></span>
+                                Branding & Identity
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="services" value="web">
+                                <span class="check-box"></span>
+                                Web Development
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="services" value="product">
+                                <span class="check-box"></span>
+                                Product Design
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" name="services" value="marketing">
+                                <span class="check-box"></span>
+                                Marketing & Strategy
+                            </label>
+                        </div>
+                        <span class="error-text block-error" id="servicesError">Select at least one service</span>
+                    </div>
+
+                    <div class="form-section">
+                        <span class="section-number">03.</span>
+                        <h2 class="section-title">Budget (USD)</h2>
+                        <div class="radio-flex" id="budgetGroup">
+                            <label class="custom-radio">
+                                <input type="radio" name="budget" value="10k-25k" required>
+                                <span class="radio-btn">10k-25k</span>
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="budget" value="25k-50k">
+                                <span class="radio-btn">25k-50k</span>
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="budget" value="50k-100k">
+                                <span class="radio-btn">50k-100k</span>
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="budget" value="100k+">
+                                <span class="radio-btn">100k+</span>
+                            </label>
+                        </div>
+                        <span class="error-text block-error" id="budgetError">Select a budget range</span>
+                    </div>
+
+                    <div class="form-section">
+                        <span class="section-number">04.</span>
+                        <h2 class="section-title">Project Details</h2>
+                        <div class="input-wrap full-width">
+                            <textarea id="details" name="details" placeholder=" " rows="4" required></textarea>
+                            <label for="details">Tell us about your project</label>
+                            <span class="error-text">Required field</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="text">Submit Inquiry</span>
+                        <span class="arrow">&rarr;</span>
+                    </button>
+                </form>
+
+                <div class="success-panel" id="successPanel">
+                    <h2>Thank You</h2>
+                    <p>Your inquiry has been submitted successfully. Our team will review your project details and get back to you within 2 business days.</p>
+                    <button class="reset-btn" id="resetBtn">Submit Another Project</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

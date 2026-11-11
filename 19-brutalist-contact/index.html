@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAY HELLO // BRUTALIST</title>
+    <meta name="description" content="Brutalist web design contact form.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="brutal-grid">
+        
+        <!-- Header Section -->
+        <header class="brutal-header border-bottom">
+            <div class="logo">BRTL.</div>
+            <div class="nav-links">
+                <a href="#">INDEX</a>
+                <a href="#">WORK</a>
+                <a href="#" class="active">CONTACT</a>
+            </div>
+        </header>
+
+        <!-- Marquee / Ticker -->
+        <div class="ticker border-bottom">
+            <div class="ticker-content">
+                SAY HELLO — WE ARE ONLINE — OPEN FOR BUSINESS — SAY HELLO — WE ARE ONLINE — OPEN FOR BUSINESS — SAY HELLO — WE ARE ONLINE — OPEN FOR BUSINESS — 
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <main class="main-content">
+            
+            <!-- Left Panel -->
+            <div class="info-panel border-right">
+                <h1 class="giant-text">HIT<br>US<br>UP.</h1>
+                
+                <div class="contact-details">
+                    <div class="detail-box">
+                        <h3>EMAIL</h3>
+                        <a href="mailto:yell@brtl.studio" class="brutal-link">YELL@BRTL.STUDIO</a>
+                    </div>
+                    <div class="detail-box">
+                        <h3>PHONE</h3>
+                        <a href="tel:18000000000" class="brutal-link">1-800-000-0000</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel (Form) -->
+            <div class="form-panel">
+                
+                <form id="brutalForm" class="brutal-form" novalidate>
+                    <div class="form-row border-bottom">
+                        <label for="name">NAME:</label>
+                        <input type="text" id="name" name="name" placeholder="WHO ARE YOU?" required>
+                        <span class="error-badge">REQUIRED</span>
+                    </div>
+
+                    <div class="form-row border-bottom">
+                        <label for="email">EMAIL:</label>
+                        <input type="email" id="email" name="email" placeholder="WHERE TO REPLY?" required>
+                        <span class="error-badge">INVALID</span>
+                    </div>
+
+                    <div class="form-row border-bottom">
+                        <label for="type">TYPE:</label>
+                        <select id="type" name="type" required>
+                            <option value="" disabled selected>WHAT IS THIS ABOUT?</option>
+                            <option value="money">MONEY (PROJECT)</option>
+                            <option value="fame">FAME (PRESS)</option>
+                            <option value="other">OTHER</option>
+                        </select>
+                        <span class="error-badge">REQUIRED</span>
+                    </div>
+
+                    <div class="form-row border-bottom text-row">
+                        <label for="message">MESSAGE:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="START TYPING..." required></textarea>
+                        <span class="error-badge">REQUIRED</span>
+                    </div>
+
+                    <button type="submit" class="brutal-btn" id="submitBtn">
+                        <span class="btn-text">SEND MESSAGE &rarr;</span>
+                        <span class="spinner"></span>
+                    </button>
+                </form>
+
+                <!-- Success State -->
+                <div class="success-block hidden" id="successState">
+                    <h2>MESSAGE<br>RECEIVED.</h2>
+                    <button class="brutal-btn invert" id="resetBtn">RESET FORM</button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

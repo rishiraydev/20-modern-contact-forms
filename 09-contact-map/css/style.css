@@ -1,0 +1,458 @@
+:root {
+    --primary: #1E3A8A; /* Deep Blue */
+    --primary-light: #EFF6FF;
+    --secondary: #E53935; /* Red accent for markers */
+    --text-main: #1F2937;
+    --text-muted: #6B7280;
+    --bg-main: #F3F4F6;
+    --bg-card: #FFFFFF;
+    --border: #E5E7EB;
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    
+    --container-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.site-header {
+    background: var(--bg-card);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo svg {
+    width: 28px;
+    height: 28px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.contact-hero {
+    background-color: var(--primary);
+    color: white;
+    padding: 5rem 0 7rem;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Info Cards */
+.info-section {
+    margin-top: -4rem;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 4rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.info-card {
+    background: var(--bg-card);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    border-top: 4px solid var(--primary);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+}
+
+.card-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.info-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.info-card strong {
+    color: var(--text-main);
+}
+
+/* Form and Map Section */
+.form-map-section {
+    padding-bottom: 5rem;
+}
+
+.content-split {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    padding: 3rem;
+    position: relative;
+}
+
+.form-wrapper h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Validation */
+.error-feedback {
+    display: none;
+    color: var(--secondary);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: var(--secondary);
+}
+
+.form-group.error .error-feedback {
+    display: block;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.primary-btn:hover {
+    background: #152C69;
+}
+
+.primary-btn:disabled {
+    background: var(--text-muted);
+    cursor: not-allowed;
+}
+
+/* Alert */
+.success-alert {
+    display: none;
+    background: #DEF7EC;
+    color: #03543F;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    position: relative;
+    border: 1px solid #84E1BC;
+}
+
+.success-alert.show {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+.close-alert {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Map and Hours Sidebar */
+.map-sidebar {
+    background: #FAFAFA;
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.map-container {
+    height: 350px;
+    width: 100%;
+    position: relative;
+}
+
+/* Simulated Map using CSS */
+.map-visual {
+    width: 100%;
+    height: 100%;
+    background-color: #e5e3df;
+    background-image: 
+        linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
+        linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add some random "roads" for map effect */
+.map-visual::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+        linear-gradient(to right, transparent 48%, #ffffff 48%, #ffffff 52%, transparent 52%),
+        linear-gradient(to bottom, transparent 38%, #ffffff 38%, #ffffff 42%, transparent 42%);
+    z-index: 1;
+}
+
+.map-marker {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, -100%); }
+    50% { transform: translate(-50%, -120%); }
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.map-btn {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: background 0.2s;
+}
+
+.map-btn:hover {
+    background: #f9fafb;
+}
+
+.business-hours {
+    padding: 2rem;
+    flex: 1;
+}
+
+.business-hours h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.hours-list {
+    list-style: none;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 0.95rem;
+}
+
+.hours-list li:last-child {
+    border-bottom: none;
+}
+
+.hours-list .weekend {
+    color: var(--text-muted);
+}
+
+/* Footer */
+.site-footer {
+    background: var(--text-main);
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.site-footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .content-split {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-sidebar {
+        border-left: none;
+        border-top: 1px solid var(--border);
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-section {
+        margin-top: -2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-wrap {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+    
+    .form-wrapper {
+        padding: 2rem;
+    }
+}

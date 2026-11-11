@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYS.CONTACT // NEON</title>
+    <meta name="description" content="Cyberpunk neon style contact form.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="grid-bg"></div>
+
+    <div class="container">
+        
+        <header class="sys-header">
+            <div class="sys-status">
+                <span class="pulse"></span>
+                <span>SYSTEM ONLINE</span>
+            </div>
+            <div class="sys-id">NODE: C-01</div>
+        </header>
+
+        <main class="neon-card">
+            <!-- Decorative borders -->
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+
+            <div class="card-content">
+                <h1 class="glitch" data-text="TRANSMIT_DATA">TRANSMIT_DATA</h1>
+                <p class="subtitle">> Establish secure connection to host...</p>
+
+                <form id="neonForm" class="neon-form" novalidate>
+                    <div class="input-line">
+                        <label for="identifier">IDENTIFIER [NAME]</label>
+                        <div class="input-wrapper">
+                            <span class="prefix">></span>
+                            <input type="text" id="identifier" name="identifier" autocomplete="off" required>
+                        </div>
+                        <span class="err-msg">ERROR: IDENTIFIER REQUIRED</span>
+                    </div>
+
+                    <div class="input-line">
+                        <label for="comlink">COM_LINK [EMAIL]</label>
+                        <div class="input-wrapper">
+                            <span class="prefix">></span>
+                            <input type="email" id="comlink" name="comlink" autocomplete="off" required>
+                        </div>
+                        <span class="err-msg">ERROR: INVALID COM_LINK FORMAT</span>
+                    </div>
+
+                    <div class="input-line">
+                        <label for="payload">PAYLOAD [MESSAGE]</label>
+                        <div class="input-wrapper textarea-wrapper">
+                            <span class="prefix">></span>
+                            <textarea id="payload" name="payload" rows="4" required></textarea>
+                        </div>
+                        <span class="err-msg">ERROR: PAYLOAD CANNOT BE EMPTY</span>
+                    </div>
+
+                    <div class="action-row">
+                        <button type="submit" class="neon-btn" id="submitBtn">
+                            <span class="btn-text">INITIATE_TRANSFER</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="terminal-success" id="successState">
+                    <div class="success-log">
+                        <p>> Handshake successful.</p>
+                        <p>> Encrypting payload...</p>
+                        <p>> Transmitting data... 100%</p>
+                        <p class="highlight">> TRANSFER COMPLETE.</p>
+                    </div>
+                    <button class="neon-btn outline" id="resetBtn">RETURN_TO_MAIN</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="sys-footer">
+            <div class="links">
+                <a href="#">[NET]</a>
+                <a href="#">[HUB]</a>
+                <a href="#">[SEC]</a>
+            </div>
+            <div>SECURE CHANNEL :: V.2.4.9</div>
+        </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

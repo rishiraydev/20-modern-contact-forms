@@ -1,0 +1,213 @@
+:root {
+    --term-bg: #1e1e1e;
+    --term-text: #a9dc76; /* Greenish/amber terminal text */
+    --term-header: #323233;
+    --prompt: #fc9867;
+    --error: #ff6188;
+    
+    --font-mono: 'Fira Code', 'Courier New', Courier, monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2d2a2e; /* Darker background outside terminal */
+    color: var(--term-text);
+    font-family: var(--font-mono);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Terminal Window Container */
+.terminal-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--term-bg);
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header / Window Chrome */
+.terminal-header {
+    background-color: var(--term-header);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #111;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    left: 15px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.close { background-color: #ff5f56; }
+.minimize { background-color: #ffbd2e; }
+.maximize { background-color: #27c93f; }
+
+.window-title {
+    width: 100%;
+    text-align: center;
+    color: #8b8b8b;
+    font-size: 0.85rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Terminal Body */
+.terminal-body {
+    padding: 20px;
+    min-height: 400px;
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+}
+
+.output-line {
+    margin-bottom: 5px;
+}
+
+.mt-1 {
+    margin-top: 15px;
+}
+
+.success {
+    color: #a9dc76;
+    font-weight: bold;
+}
+
+/* Form and Inputs */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.prompt-line {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.prompt {
+    color: var(--prompt);
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.command {
+    color: #78dce8;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.cli-input {
+    background: transparent;
+    border: none;
+    color: var(--term-text);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    flex-grow: 1;
+    min-width: 50%;
+}
+
+.cli-input:focus {
+    outline: none;
+}
+
+.textarea-input {
+    resize: none;
+    overflow: hidden;
+    line-height: 1.5;
+    /* Remove default scrollbar space to look like terminal */
+}
+
+/* Hide inputs that aren't active yet */
+.hidden {
+    display: none !important;
+}
+
+.hidden-btn {
+    display: none;
+}
+
+/* Error Messages */
+.error-msg {
+    display: none;
+    color: var(--error);
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.error-msg.active {
+    display: block;
+}
+
+/* Cursor Simulation */
+.blinking-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    background-color: var(--term-text);
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Custom Reset Button (Command style) */
+.reset-cmd {
+    background: transparent;
+    border: none;
+    color: #ffd866;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.reset-cmd:hover {
+    color: var(--term-text);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .terminal-body {
+        font-size: 0.85rem;
+    }
+    
+    .cli-input, .reset-cmd {
+        font-size: 0.85rem;
+    }
+    
+    .prompt-line {
+        flex-direction: column;
+    }
+    
+    .prompt, .command {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact IDE</title>
+    <meta name="description" content="A contact form that looks like a code editor.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="editor-window">
+        <!-- Top Title Bar -->
+        <div class="title-bar">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control min"></span>
+                <span class="control max"></span>
+            </div>
+            <div class="window-title">contact-api - Visual Studio Code</div>
+        </div>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+            
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">EXPLORER</div>
+                <div class="tree-root">
+                    <div class="tree-item folder open">
+                        <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        <span>CONTACT-API</span>
+                    </div>
+                    <div class="tree-children">
+                        <div class="tree-item folder open">
+                            <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                            <span>src</span>
+                        </div>
+                        <div class="tree-children">
+                            <div class="tree-item file active">
+                                <span class="file-icon js">JS</span>
+                                <span>sendMessage.js</span>
+                            </div>
+                            <div class="tree-item file">
+                                <span class="file-icon json">{}</span>
+                                <span>config.json</span>
+                            </div>
+                        </div>
+                        <div class="tree-item file">
+                            <span class="file-icon md">M↓</span>
+                            <span>README.md</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Editor Area -->
+            <main class="editor-area">
+                <!-- Tabs -->
+                <div class="editor-tabs">
+                    <div class="tab active">
+                        <span class="file-icon js">JS</span>
+                        sendMessage.js
+                        <span class="tab-close">&times;</span>
+                    </div>
+                    <div class="tab">
+                        <span class="file-icon md">M↓</span>
+                        README.md
+                        <span class="tab-close">&times;</span>
+                    </div>
+                    <div class="run-actions">
+                        <button id="runBtn" class="run-btn" title="Run Code">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            Run
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Code Container -->
+                <div class="code-container">
+                    <!-- Line Numbers -->
+                    <div class="line-numbers">
+                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                    </div>
+                    
+                    <!-- Code Editor (Form) -->
+                    <div class="code-content">
+                        <form id="editorForm" novalidate>
+                            <div class="code-line"><span class="keyword">import</span> { <span class="variable">sendMail</span> } <span class="keyword">from</span> <span class="string">'@api/mail'</span>;</div>
+                            <div class="code-line empty"></div>
+                            <div class="code-line"><span class="keyword">const</span> <span class="variable">contactData</span> = {</div>
+                            
+                            <div class="code-line indent">
+                                <span class="property">name</span>: 
+                                <span class="string">"</span><input type="text" id="name" name="name" class="code-input" placeholder="Enter your name" required><span class="string">"</span><span class="punctuation">,</span>
+                                <span class="error-inline" id="err-name">// Required</span>
+                            </div>
+
+                            <div class="code-line indent">
+                                <span class="property">email</span>: 
+                                <span class="string">"</span><input type="email" id="email" name="email" class="code-input" placeholder="Enter your email" required><span class="string">"</span><span class="punctuation">,</span>
+                                <span class="error-inline" id="err-email">// Valid email required</span>
+                            </div>
+                            
+                            <div class="code-line indent">
+                                <span class="property">subject</span>: 
+                                <span class="string">"</span><select id="subject" name="subject" class="code-input select-input" required>
+                                    <option value="" disabled selected>Select subject...</option>
+                                    <option value="hello">Just saying hello</option>
+                                    <option value="project">New Project</option>
+                                    <option value="support">Support</option>
+                                </select><span class="string">"</span><span class="punctuation">,</span>
+                                <span class="error-inline" id="err-subject">// Required</span>
+                            </div>
+
+                            <div class="code-line indent">
+                                <span class="property">message</span>: <span class="string">\`</span>
+                            </div>
+                            <div class="code-line indent-double">
+                                <textarea id="message" name="message" class="code-input textarea-input" rows="4" placeholder="Type your message here..." required></textarea>
+                                <span class="error-inline block" id="err-message">// Message required</span>
+                            </div>
+                            <div class="code-line indent">
+                                <span class="string">\`</span>
+                            </div>
+                            
+                            <div class="code-line">};</div>
+                            <div class="code-line empty"></div>
+                            
+                            <div class="code-line"><span class="comment">/**</span></div>
+                            <div class="code-line"><span class="comment"> * Click 'Run' button above or hit Submit to send</span></div>
+                            <div class="code-line"><span class="comment"> */</span></div>
+                            <div class="code-line"><span class="variable">sendMail</span>(<span class="variable">contactData</span>)</div>
+                            <div class="code-line indent">.<span class="function">then</span>(response => <span class="variable">console</span>.<span class="function">log</span>(<span class="string">'Message Sent!'</span>))</div>
+                            <div class="code-line indent">.<span class="function">catch</span>(error => <span class="variable">console</span>.<span class="function">error</span>(error));</div>
+                            
+                            <!-- Hidden actual submit to allow native form behavior if needed -->
+                            <button type="submit" style="display:none"></button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Terminal/Console Panel -->
+                <div class="console-panel">
+                    <div class="console-tabs">
+                        <span class="console-tab">PROBLEMS</span>
+                        <span class="console-tab">OUTPUT</span>
+                        <span class="console-tab active">TERMINAL</span>
+                    </div>
+                    <div class="console-output" id="consoleOutput">
+                        <div class="log">Ready to execute sendMessage.js...</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="status-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> 0</span>
+                <span class="status-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg> 0</span>
+            </div>
+            <div class="status-right">
+                <span class="status-item">Ln 14, Col 32</span>
+                <span class="status-item">Spaces: 4</span>
+                <span class="status-item">UTF-8</span>
+                <span class="status-item">JavaScript</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
